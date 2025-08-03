@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Valle Grande</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #fffdf7;
+      color: #333;
+    }
+
+    header {
+      background-color: #fcefe3;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #f5c9c9;
+    }
+
+    header h1 {
+      margin: 10px 0;
+      color: #5c4b51;
+    }
+
+    nav a {
+      background-color: #f9d5e5;
+      color: #5c4b51;
+      padding: 10px 18px;
+      margin: 5px;
+      border-radius: 20px;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      background-color: #f7a8b8;
+    }
+
+    section {
+      display: none;
+      padding: 40px 20px;
+      background-color: #fafafa;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h2 {
+      color: #336666;
+    }
+
+    .contacto p {
+      margin: 5px 0;
+    }
+
+    a.correo, a.web {
+      color: #336699;
+      text-decoration: none;
+    }
+
+    a.correo:hover, a.web:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Valle Grande</h1>
+    <nav>
+      <a onclick="mostrarSeccion('nosotros')">Nosotros</a>
+      <a onclick="mostrarSeccion('historia')">Historia</a>
+      <a onclick="mostrarSeccion('mision')">Misión y Visión</a>
+      <a onclick="mostrarSeccion('contacto')">Contacto</a>
+    </nav>
+  </header>
+
+  <section id="nosotros" class="active">
+    <h2>¿Quiénes somos?</h2>
+    <p>
+      Valle Grande es actualmente un Centro de Educación Superior constituido por la Promotora de Obras Sociales y de Instrucción Popular (PROSIP) el 25 de febrero de 1965, reconocido por el Ministerio de Agricultura mediante Resolución Directoral N° 04383-AG-DGAG del 2 de junio de 1983 y por el Ministerio de Educación mediante Resolución Ministerial N°0751-92-ED.
+    </p>
+  </section>
+
+  <section id="historia">
+    <h2>Desarrollo histórico</h2>
+    <p>
+      Han transcurrido casi 50 años de trabajo y continuamos con el mismo deseo, seguir contribuyendo con el bienestar de las familias de Cañete y Yauyos.
+    </p>
+  </section>
+
+  <section id="mision">
+    <h2>Misión</h2>
+    <p>
+      Formar personas en el ámbito técnico profesional, considerando el sentido trascendente del hombre, desarrollando en ellos competencias, que faciliten su inserción laboral, contribuyendo de esta manera al desarrollo del país.
+    </p>
+
+    <h2>Visión</h2>
+    <p>
+      Ser una institución referente de excelencia de la educación técnico profesional del Perú, asociada al sector productivo.
+    </p>
+  </section>
+
+  <section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <p><strong>RUC:</strong> 20120099095</p>
+    <p><strong>Razón Social:</strong> I.E.S.T.P. Valle Grande</p>
+    <p><strong>Dirección:</strong> Ant. Panamericana Sur: Km. 144, San Vicente de Cañete, Lima, Perú. Apartado Postal 70.</p>
+    <p><strong>Teléfono:</strong> (01) 581-2261</p>
+    <p><strong>Correo:</strong> <a class="correo" href="mailto:informes@vallegrande.edu.pe">informes@vallegrande.edu.pe</a></p>
+    <p><strong>Web:</strong> <a class="web" href="http://www.vallegrande.edu.pe" target="_blank">www.vallegrande.edu.pe</a></p>
+  </section>
+
+  <script>
+    function mostrarSeccion(id) {
+      const secciones = document.querySelectorAll("section");
+      secciones.forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
